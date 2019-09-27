@@ -65,8 +65,8 @@ What is happening:
 - The red tank prints the messages using the Unity GUI system to indicate:
     - Whether the blue tank is in front or behind
     - Whether the front tank is inside a 45 degree FOV
+    - Use the [Unity reference](unityref.md) to figure out what API's to call!
   
-
 ## Week 1 - Introduction
 ## Lecture
 - [Slides](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
@@ -83,7 +83,7 @@ What is happening:
 - Use colliders
 
 ### Instructions
-- Sign up for the [class Facebook page](https://www.facebook.com/groups/2228012700814097/)
+- Sign up for the [class Facebook page](https://www.facebook.com/groups/407619519952058/)
 - Check out the [Unity tutorial videos](https://unity3d.com/learn/tutorials)
 
 Today you can test your knowledge of Unity by making this:
