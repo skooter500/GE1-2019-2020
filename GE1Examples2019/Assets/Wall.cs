@@ -15,11 +15,12 @@ public class Wall : MonoBehaviour
         {
             for (int i = -halfWidth; i < halfWidth; i++)
             {
-                Vector3 pos = transform.position
-                    + new Vector3(i, 0.5f + j, 0);
-
+                Vector3 pos = transform.TransformPoint(new Vector3(i, 0.5f + j, 0));
+                
+                    
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 cube.transform.position = pos;
+                cube.transform.rotation = transform.rotation;
 
                 cube.GetComponent<Renderer>().material.color =
                     Color.HSVToRGB(Random.value, 1, 1);
