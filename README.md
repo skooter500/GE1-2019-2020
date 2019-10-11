@@ -40,7 +40,31 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
-## Week 3 - Vectors & a little bit on Quaternions
+## Week 4
+
+## Lab
+### Learning Outcomes
+- Learn how to use coroutines
+- Learn how to use colliders
+
+Your task today is to make this:
+
+[![YouTube](http://img.youtube.com/vi/HJP7AO8pCyM/0.jpg)](http://www.youtube.com/watch?v=HJP7AO8pCyM)
+
+Clone the repo for the course and make sure you start from the master branch. Create a branch for todays solution (call it lab4)
+
+What is happening:
+
+- The green tank is the player. The blue tanks are the "enemies"
+- Enemies spawn at a rate of 1 enemy per second
+- Enemies fall from the sky and land on the ground
+- There are a maximum of 5 enemies at any time
+- When the player hits an enemy it "explodes" (all the parts break apart)
+- After 4 seconds, it sinks into the ground
+- After seven seconds, it gets removed from the scene
+
+
+## Week 3 - Vectors
 - [Slides on vectors & trigonometry](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
 - [Slides on quaternions](https://drive.google.com/file/d/11-KFbodaAl9dRSs9ljzdDyTDp1QWWnsZ/view?usp=sharing)
 - Solution to last weeks lab is in scene2
