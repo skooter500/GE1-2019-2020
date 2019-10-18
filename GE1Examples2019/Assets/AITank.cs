@@ -11,7 +11,7 @@ public class AITank : MonoBehaviour
     public float speed = 10;
     List<Vector3> waypoints = new List<Vector3>();
 
-    public Transform player;
+    Transform player;
 
     // Start is called before the first frame update
     void Start()
