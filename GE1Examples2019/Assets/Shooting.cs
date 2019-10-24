@@ -9,49 +9,36 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        //StartCoroutine(ShootingCoroutine());
+        StartCoroutine(Shoot());
     }
 
-    public int fireRate = 2;
-    float ellapsed = float.MaxValue;
-    
+    int fireRate = 2;
 
-    System.Collections.IEnumerator ShootingCoroutine()
+    IEnumerator Shoot()
     {
-        float toPass = 1.0f / fireRate;
         while (true)
         {
-            Debug.Log("Shooting!");
-            GameObject bullet = GameObject.Instantiate<GameObject>(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-            yield return new WaitForSeconds(toPass);
-
+            if (Input.GetButton("Fire1") || Input.GetKey(KeyCode.LeftControl))
+            {
+                GameObject bullet = GameObject.Instantiate<GameObject>(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+                yield return new WaitForSeconds(1.0f / fireRate);
+            }
+            yield return null;
         }
     }
+
 
     Coroutine cr;
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            cr = StartCoroutine(ShootingCoroutine());
-        }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            StopCoroutine(cr);
-        }
-        
-        // Without coroutines
-        /*float toPass = 1.0f / fireRate;
-        ellapsed += Time.deltaTime;
-        if (Input.GetAxis("Fire1") == 1 && ellapsed > toPass)
+        /*
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             GameObject bullet = GameObject.Instantiate<GameObject>(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
             ellapsed = 0;
         }
         */
-        
     }
 }
