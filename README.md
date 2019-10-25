@@ -40,9 +40,32 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
+## Week 6 - Physics
+## Lecture
+- [Physics 1](https://drive.google.com/open?id=1rYFVCwmL81sEUD-b-Nt-1lmMKw-4XDi0)
+- [Physics 2](https://drive.google.com/open?id=1ZGWsmDz9uIJEUf2HPBV2JyYxv1RswPar)
+- [Physics 3](https://drive.google.com/open?id=1Tncqb27Cg8LpqHqrtSfcZlgeqTo-HpE8)
+
+## Lab
+### Learning outcomes
+- Write a physics integration function from scratch
+- Use trigonometry
+- Make a path following AI
+
+Today lets use the [Seek steering behaviour](https://natureofcode.com/book/chapter-6-autonomous-agents/) as inspiration to make this little scenario:
+
+[![YouTube](http://img.youtube.com/vi/BuyQNxwLC9g/0.jpg)](http://www.youtube.com/watch?v=BuyQNxwLC9g)
+
+- Make a Path MonoBehaviour that has a public List of Vector3. Use trigonometry to create the elements of the vector. You can also add gizmos so that the path can be seen in the Unity editor. This class does not need an Update method. It is just a container for the waypoints
+- Make a PathFollower MonoBehaviour that has a public field for the path (that you can drag the Path onto) and another public field for the current waypoint. This class should have an Update method that steers the gameobject towards the current waypoint. When it gets close it should advance to the next
+- Make a prefab consisting of a Cube with a TrailRenderer attached. Attach the Pathfollower
+- Make a Spawner that spans the prefabs and assigns the path. You can offset the current waypoint for each one that you spawn
+
 ## Week 5 - Vectors & quaternions
 - [Slides on quaternions](https://drive.google.com/file/d/11-KFbodaAl9dRSs9ljzdDyTDp1QWWnsZ/view?usp=sharing)
 - [Vectors in Unity](https://docs.unity3d.com/Manual/UnderstandingVectorArithmetic.html)
+
+[![YouTube](http://img.youtube.com/vi/IXySkVFNhdk/0.jpg)](http://www.youtube.com/watch?v=IXySkVFNhdk)
 
 Quaternions in Unity:
 
