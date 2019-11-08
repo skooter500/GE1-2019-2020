@@ -9,21 +9,11 @@ public class AITank : MonoBehaviour
 
     public int current = 0;
     public float speed = 10;
-    List<Vector3> waypoints = new List<Vector3>();
-
+    public List<Vector3> waypoints = new List<Vector3>();
     public Transform player;
-
-    // Start is called before the first frame update
     void Start()
     {
         MakeWaypoints();
-
-        Vector3 a = new Vector3(10, 9);
-        Vector3 b = new Vector3(20, 10);
-        Vector3 c = b - a;
-        float len = c.magnitude;
-
-
     }
 
     void MakeWaypoints()
@@ -41,18 +31,19 @@ public class AITank : MonoBehaviour
 
     public void OnDrawGizmos()
     {
-        MakeWaypoints();
-        for(int i = 0; i < waypoints.Count ; i ++)
+        if (!Application.isPlaying)
         {
-            Gizmos.DrawWireSphere(waypoints[i], 2);
+            MakeWaypoints();
+            for (int i = 0; i < waypoints.Count; i++)
+            {
+                Gizmos.DrawWireSphere(waypoints[i], 2);
+            }
         }
     }
-
-    // Update is called once per frame
-
     void Update()
     {
         Vector3 toTarget = waypoints[current] - transform.position;
+        GameManager.Log("To waypoint: " + toTarget.magnitude);
         if (toTarget.magnitude < 1)
         {
             current = (current + 1) % waypoints.Count;
@@ -72,7 +63,6 @@ public class AITank : MonoBehaviour
         }
         float angle = Mathf.Acos(Vector3.Dot(transform.forward, toPlayer) / toPlayer.magnitude) * Mathf.Rad2Deg;
         GameManager.Log("Angle to player 1: " + angle);
-        //Log("Angle to player 2: " + Vector3.Angle(transform.forward, toPlayer));
         if (angle < 45)
         {
             GameManager.Log("Player is inside the FOV");
