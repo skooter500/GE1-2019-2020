@@ -161,5 +161,22 @@ public class PhysicsFactory : MonoBehaviour {
                 }
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            RaycastHit raycastHit;
+            GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out raycastHit))
+            {
+                if (raycastHit.collider.gameObject.tag == "groundPlane")
+                {
+                    Vector3 pos = raycastHit.point;
+                    pos.y = 20;
+                    CreateGear(pos.x, pos.y, pos.z, 10, 10);
+                }
+            }
+        }
+
+
     }
 }

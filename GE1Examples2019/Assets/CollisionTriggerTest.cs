@@ -22,12 +22,12 @@ public class CollisionTriggerTest : MonoBehaviour {
 
     void OnCollisionExit(Collision other)
     {
-        Debug.Log((i++) + " OnCollisionEnter: " + other.gameObject);
+        Debug.Log((i++) + " OnCollisionExit: " + other.gameObject);
     }
 
     void OnCollisionStay(Collision other)
     {
-        Debug.Log((i++) + " OnCollisionEnter: " + other.gameObject);
+        Debug.Log((i++) + " OnCollisionStay: " + other.gameObject);
     }
 
     void OnTriggerEnter(Collider other)
