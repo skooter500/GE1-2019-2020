@@ -40,7 +40,47 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
-## Week 6 - Physics
+## Week - Physics 2
+
+### Learning Outcomes
+- Know how to use raycasts, quaternions and vectors
+- Know how to use trigonometry and the unit circle
+- Know how to create physics objects from code
+- Know the different types of physics joints and what they are used for
+
+In todays lab you can try and make this:
+
+[![YouTube](http://img.youtube.com/vi/vDu28RoqPus/0.jpg)](http://www.youtube.com/watch?v=vDu28RoqPus)
+
+What is happening:
+
+- The camera is controlled using keyboard and mouse. 
+- When the player presses U, a tower will spawn in front of the player. To choose the position, you should raycast from the cameras position in the direction the camera is looking to hit the ground
+- When the player presses I, a rainbow caterpillar will spawn. I made a seperate script for spawning the caterpillar. Have fields for setting:
+    - The number of segments
+    - The size of each of the segments. I used a cube for each segment and set the localScale to change the size. I also calculated the gap between the segments relative to the size
+    - Parent the segments to the owning transform
+    - Dont forget to add a rigidbody to the segment
+    - Try and get the basic caterpillar working first and then you can refactor to add tapering at the front and back
+    - Use Color.HSVToRGB to set the colour of each segment
+    - Link the segments to each other with HingeJoints
+    - Add fields for spring and damper values. I used values of 100 and 50
+    - In update, use addTorque to add rotational force to the rigidBodies. Use a variable to control which segment get the torque and you can use another variable speed to control how fast the contraction moves along the creatures body
+
+Start with scene6
+Unity API's you can use in your solution:
+
+- GameObject.Instantiate
+- Quaternion.AngleAxis
+- Physics.Raycast
+- GameObject.CreatePrimitive
+- Color.HSVToRGB
+- RigidBody.AddTorque
+
+
+## Week 7 - Review Week
+
+## Week 6 - Physics 1
 ## Lecture
 - [Physics 1](https://drive.google.com/open?id=1rYFVCwmL81sEUD-b-Nt-1lmMKw-4XDi0)
 - [Physics 2](https://drive.google.com/open?id=1ZGWsmDz9uIJEUf2HPBV2JyYxv1RswPar)
