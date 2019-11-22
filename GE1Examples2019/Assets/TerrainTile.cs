@@ -108,18 +108,5 @@ public class TerrainTile : MonoBehaviour {
 
     
     float t = 0;
-	// Update is called once per frame   
-    
-    /*        
-	void Update () {
-        Vector3[] vertices = m.vertices;
-        for (int i = 0; i < vertices.Length; i++)
-        {
-            vertices[i].y = SampleCell(transform.position.x + vertices[i].x, transform.position.z + vertices[i].z + t);
-        }
-        m.vertices = vertices;
-        //t += Time.deltaTime;
-        m.RecalculateNormals();
-	}
-    */
+
 }
