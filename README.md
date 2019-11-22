@@ -40,7 +40,24 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
-## Week - Physics 2
+## Week 10 - Terrain & Perlin noise
+
+## Lab
+
+Try and make this:
+
+[![YouTube](http://img.youtube.com/vi/33idp-_ss8U/0.jpg)](http://www.youtube.com/watch?v=33idp-_ss8U)
+
+
+- Start with the InfiniteTerrain Scene
+- Experiment with adding perlin noise together at different resolutions
+- Modify the SampleCell function so that if the sample falls within a certain range in the middle, you flatten in. Ie. Make it's value 0.5, and flatten values above and below
+- Create a new shader that colours the vertex based on it's Y value (height). If the height falls within different ranges it gets a different colour
+
+## Week 9 - Audo
+- See the AudioExample scene
+
+## Week 8 - Physics 2
 
 ### Learning Outcomes
 - Know how to use raycasts, quaternions and vectors
