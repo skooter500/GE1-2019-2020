@@ -40,6 +40,46 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
+# Week 12 - Infinite Forms Spawning System case study
+
+Q1 2019
+
+A 3D tower defence game made in Unity has the following rules:
+
+1.	Players place towers by using the mouse to select a location on the map.
+2.	Towers become active when a creep comes in range.
+3.	When a tower becomes active it will turn to face the creep and continue targeting the creep so long as it stays in range.
+4.	Towers can fire 5 bullets per second. 
+5.	Bullets disappear after 5 seconds if they don’t hit anything
+6.	There are three possible types of creeps and each has an equal probability of being spawned.
+7.	Creeps follow a path to get to the players base.
+8.	When a creep is hit with a bullet, it explodes and after a few seconds, sinks into the ground and gets removed from the scene.
+
+Taking each of the rules above, how would you program them in Unity?
+
+Look at the code and answer the these questions:
+
+1.	How does the system decide what creatures to spawn next?
+2.	How does the system choose an X-Z position for the creature?
+3.	How is the Y of the position determined?
+4.	What is the rule that determines whether a creature gets suspended?
+5.	When a new creature is needed, old creatures are recycled. How is this achieved?
+6.	Creatures fade in when they are created. How does the system do this?
+7.	How is the spawn rate specified? How to spawn creatures at the spawn rate?
+8.	How can other MonoBehaviours find the Mother? 
+9. What is a namespace in C#. Are they useful?
+10. What is the difference between a dictionary and a multidictionary?
+
+Scripts you will need:
+
+[Mother.cs](code/Mother.cs)
+[LifeColours.cs](code/LifeColours.cs)
+[SpawnParameters.cs](code/SpawnParameters.cs)
+[WorldGenerator.cs](code/WorldGenerator.cs)
+
+
+## Week 11 - C# Job System
+
 ## Week 10 - Terrain & Perlin noise
 
 ## Lab

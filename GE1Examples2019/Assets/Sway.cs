@@ -11,15 +11,15 @@ public class Sway : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //SwayJobManager.Instance.Add(this);
+        SwayJobManager.Instance.Add(this);
     }
 
     // Update is called once per frame
-    
+    /*
     void Update()
     {
         transform.rotation = Quaternion.AngleAxis(Mathf.Sin(theta) * angle, transform.right);
         theta += Mathf.PI * 2.0f * Time.deltaTime * frequency;
     }
-    
+    */
 }
